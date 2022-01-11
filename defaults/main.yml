@@ -1,0 +1,6 @@
+---
+# defaults file for ansible-role-win-onedrive
+onedrive_download_url: 'https://go.microsoft.com/fwlink/?linkid=844652'
+onedrive_product_id: 'OneDriveSetup.exe'
+onedrive_per_machine_install: false
+onedrive_installer_arguments: "{{ onedrive_per_machine_install | bool | ternary('/allusers /silent', '/silent') }}"

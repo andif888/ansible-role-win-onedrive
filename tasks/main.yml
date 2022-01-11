@@ -1,0 +1,8 @@
+---
+# tasks file for ansible-role-win-onedrive
+- name: Install OneDrive
+  win_package:
+    path: '{{ onedrive_download_url }}'
+    product_id: '{{ onedrive_product_id }}'
+    state: present
+    arguments: '{{ onedrive_installer_arguments }}'
