@@ -3,6 +3,6 @@
 - name: Install OneDrive
   win_package:
     path: '{{ onedrive_download_url }}'
-    product_id: '{{ onedrive_product_id }}'
+    creates_path: '{{ onedrive_creates_path }}'
     state: present
     arguments: '{{ onedrive_installer_arguments }}'
