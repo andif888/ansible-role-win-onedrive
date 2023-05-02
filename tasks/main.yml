@@ -5,4 +5,9 @@
     path: '{{ onedrive_download_url }}'
     creates_path: '{{ onedrive_creates_path }}'
     state: present
+    validate_certs: '{{ validate_certs | default(omit) }}'
+    proxy_password: '{{ proxy_password | default(omit) }}'
+    proxy_url : '{{ proxy_url  | default(omit) }}'
+    proxy_use_default_credential: '{{ use_default_credential | default(omit) }}'
+    proxy_username: '{{ proxy_username | default(omit) }}'
     arguments: '{{ onedrive_installer_arguments }}'
